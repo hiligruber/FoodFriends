@@ -12,7 +12,7 @@
   <header class="site-header">
     <div class="container header-inner">
       <a class="logo" href="#" title="FoodieFriends logo">
-        <img src="images/logo.png" alt="FoodieFriends logo">
+        <img src="logo.png" alt="FoodieFriends logo">
       </a>
 
       <nav class="main-nav" aria-label="Main navigation">
@@ -48,7 +48,7 @@
           </ul>
         </div>
         <div class="hero-image">
-          <img src="images/hero_background.jpeg" alt="Social dining experience" class="hero-img-file">
+          <img src="hero_background.jpeg" alt="Social dining experience" class="hero-img-file">
         </div>
       </div>
     </section>
@@ -69,7 +69,7 @@
               <div class="user-avatar" style="background-color: #ffadad;">N</div>
               <span class="user-name">Noa</span>
             </div>
-            <img class="post-img" src="images/post1.jpg" alt="Mediterranean starters and bread">
+            <img class="post-img" src="post1.jpg" alt="Mediterranean starters and bread">
             <div class="post-body">
               <header class="post-head">
                 <h3>Basta</h3>
@@ -92,16 +92,16 @@
 
               <div class="post-actions">
                 <input class="toggle" type="checkbox" id="like1">
-                <label class="icon-btn btn-like" for="like1" title="ike" aria-label="Like">♡</label>
+                <label class="icon-btn btn-like" for="like1" aria-label="Like">♡</label>
 
-                <button class="icon-btn btn-comment" type="button" aria-label="Comment"
-                  onclick="toggleComments(this)">💬</button>
+                <button class="icon-btn btn-comment" type="button"
+                  onclick="toggleComments(this)" aria-label="Comment">💬</button>
 
                 <input class="toggle" type="checkbox" id="save1">
-                <label class="icon-btn btn-save" for="save1" title="Save" aria-label="Save">★</label>
+                <label class="icon-btn btn-save" for="save1" aria-label="Save">★</label>
               </div>
 
-              <div class="comments-section">
+              <div class="comments-section hidden">
                 <div class="comment">
                   <div class="comment-avatar" style="background-color: #a0c4ff;">G</div>
                   <div class="comment-content">
@@ -114,13 +114,12 @@
             </div>
           </article>
 
-
           <article class="post-card">
             <div class="user-info">
               <div class="user-avatar" style="background-color: #ffd6a5;">H</div>
               <span class="user-name">Hili</span>
             </div>
-            <img class="post-img" src="images/post2.jpg" alt="Strawberries and cream dessert">
+            <img class="post-img" src="post2.jpg" alt="Strawberries and cream dessert">
             <div class="post-body">
               <header class="post-head">
                 <h3>Cafe Italia</h3>
@@ -143,16 +142,16 @@
 
               <div class="post-actions">
                 <input class="toggle" type="checkbox" id="like2">
-                <label class="icon-btn btn-like" for="like2" title="Like" aria-label="Like">♡</label>
+                <label class="icon-btn btn-like" for="like2" aria-label="Like">♡</label>
 
-                <button class="icon-btn btn-comment" type="button" aria-label="Comment"
-                  onclick="toggleComments(this)">💬</button>
+                <button class="icon-btn btn-comment" type="button"
+                  onclick="toggleComments(this)" aria-label="Comment">💬</button>
 
                 <input class="toggle" type="checkbox" id="save2">
-                <label class="icon-btn btn-save" for="save2" title="Save" aria-label="Save">★</label>
+                <label class="icon-btn btn-save" for="save2" aria-label="Save">★</label>
               </div>
 
-              <div class="comments-section">
+              <div class="comments-section hidden">
                 <div class="comment">
                   <div class="comment-avatar" style="background-color: #bdb2ff;">Y</div>
                   <div class="comment-content">
@@ -165,17 +164,16 @@
             </div>
           </article>
 
-
           <article class="post-card">
             <div class="user-info">
-              <div class="user-avatar" style="background-color: #fdffb6; color: #555;">T</div>
+              <div class="user-avatar" style="background-color: #fdffb6;">T</div>
               <span class="user-name">Tomer</span>
             </div>
-            <img class="post-img" src="images/post3.jpg" alt="Asian lettuce wrap">
+            <img class="post-img" src="post3.jpg" alt="Asian lettuce wrap">
             <div class="post-body">
               <header class="post-head">
                 <h3>Thai House</h3>
-                <p class="meta">Tel aviv • 3 weeks ago</p>
+                <p class="meta">Tel Aviv • 3 weeks ago</p>
               </header>
 
               <p class="post-text">
@@ -193,16 +191,16 @@
 
               <div class="post-actions">
                 <input class="toggle" type="checkbox" id="like3">
-                <label class="icon-btn btn-like" for="like3" title="Like" aria-label="Like">♡</label>
+                <label class="icon-btn btn-like" for="like3" aria-label="Like">♡</label>
 
-                <button class="icon-btn btn-comment" type="button" aria-label="Comment"
-                  onclick="toggleComments(this)">💬</button>
+                <button class="icon-btn btn-comment" type="button"
+                  onclick="toggleComments(this)" aria-label="Comment">💬</button>
 
                 <input class="toggle" type="checkbox" id="save3">
-                <label class="icon-btn btn-save" for="save3" title="Save" aria-label="Save">★</label>
+                <label class="icon-btn btn-save" for="save3" aria-label="Save">★</label>
               </div>
 
-              <div class="comments-section">
+              <div class="comments-section hidden">
                 <div class="comment">
                   <div class="comment-avatar" style="background-color: #ffc6ff;">R</div>
                   <div class="comment-content">
@@ -219,7 +217,7 @@
       </div>
     </section>
 
-    <!-- NEWSLETTER STRIP -->
+    <!-- NEWSLETTER -->
     <section class="newsletter">
       <div class="container newsletter-inner">
         <div>
@@ -243,21 +241,18 @@
     </div>
   </footer>
 
+  <script>
+    function toggleComments(btn) {
+      const postBody = btn.closest('.post-body');
+      const commentsSection = postBody.querySelector('.comments-section');
+      commentsSection.classList.toggle('hidden');
+
+      if (!commentsSection.classList.contains('hidden')) {
+        const input = commentsSection.querySelector('input');
+        if (input) setTimeout(() => input.focus(), 100);
+      }
+    }
+  </script>
 
 </body>
-<script>
-  function toggleComments(btn) {
-    // Find the closest post-body, then find the comments-section within it
-    const postBody = btn.closest('.post-body');
-    const commentsSection = postBody.querySelector('.comments-section');
-    commentsSection.classList.toggle('hidden');
-
-    // Optional: Focus input if opening
-    if (!commentsSection.classList.contains('hidden')) {
-      const input = commentsSection.querySelector('input');
-      if (input) setTimeout(() => input.focus(), 100);
-    }
-  }
-</script>
-
 </html>
