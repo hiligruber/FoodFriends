@@ -1,2 +1,2 @@
-# FoodFriends
-https://hiligruber.github.io/FoodFriends/
+# FoodieFriends
+https://hiligruber.github.io/FoodieFriends/
